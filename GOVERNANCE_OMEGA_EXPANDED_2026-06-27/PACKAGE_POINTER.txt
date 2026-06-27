@@ -1,0 +1,1 @@
+Public-safe pointer for the Governance Omega Expanded package. Author: Katrina Pietroniro. Version 2.0.0. Canonical control record: SOVRINT-OG/sovrint-core.
