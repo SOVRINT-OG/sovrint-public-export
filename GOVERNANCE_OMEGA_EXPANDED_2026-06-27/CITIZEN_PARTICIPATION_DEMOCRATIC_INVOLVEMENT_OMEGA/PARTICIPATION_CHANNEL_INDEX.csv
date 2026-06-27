@@ -1,0 +1,13 @@
+channel_id,channel,formal_status,required_proof,public_note
+CH.001,Assemblée nationale petition,Official parliamentary process,Petition page plus signature confirmation plus presentation record,Signature does not prove presentation or response
+CH.002,Assemblée nationale public consultation,Official parliamentary participation process,Consultation notice plus submitted brief or response plus receipt,Submission and receipt are separate states
+CH.003,Québec government public consultation,Official executive participation process,Consultation page plus submission plus confirmation,Platform entry does not prove policy adoption
+CH.004,House of Commons e-petition,Official federal parliamentary process,Petition page plus certification plus presentation,Government response period begins after presentation
+CH.005,Government of Canada consultation,Official executive participation process,Consultation page plus submission plus receipt,Outcome requires published response or policy record
+CH.006,Municipal public participation,Official local-government process,Notice plus registration or submission plus minutes,Rules vary by municipality
+CH.007,Direct correspondence to public office,Correspondence channel,Sent record plus delivery or receipt plus response,Intended recipient is not proof of delivery
+CH.008,Civil-society petition platform,Private platform campaign,Public page plus update history plus aggregate evidence,Not a parliamentary petition
+CH.009,Coalition testimony intake,Community participation channel,Consent record plus intake metadata plus protected archive,Testimony remains controlled
+CH.010,Public educational publication,Public communication channel,Publication URL plus timestamp plus version,Publication proves dissemination only
+CH.011,Resource distribution,Community education channel,Sent record plus recipient consent plus receipt where available,Distribution does not prove use or impact
+CH.012,Structured engagement registry,Internal governance control,Engagement ID plus participants plus timestamps plus outcome,Architecture must be populated to evidence operation
