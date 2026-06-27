@@ -1,0 +1,18 @@
+id,date,title,action_type,status,public_treatment
+ACT.001,2025-06-01,Coalition demand-letter draft to Québec Justice ministry,DIRECT_CORRESPONDENCE,AUTHORED,Metadata only
+ACT.002,2025-06-01,Demand-letter draft to Québec Education ministry,DIRECT_CORRESPONDENCE,AUTHORED,Metadata only
+ACT.006,2025-06-28,Bilingual federal-support citizen declaration package transmitted between documented source accounts,PETITION_SUPPORT_AND_OUTREACH,SENT_CONFIRMED,Sanitized summary
+ACT.007,2025-06-28,Citizen declaration reported more than 175 supporters,MOBILIZATION,REPORTED_IN_AUTHORED_SOURCE,Self-reported count only
+ACT.008,2025-06-29,Change.org campaign update for collective declaration,PETITION_CAMPAIGN,PUBLISHED_CONFIRMED,Public-safe metadata
+ACT.009,2025-07-05,Signature confirmed on Assemblée nationale education-budget petition,PETITION_SIGNATURE,SIGNED_CONFIRMED,Public-safe event
+ACT.010,2025-07-17,Follow-up federal-support correspondence retained as draft,DIRECT_CORRESPONDENCE,DRAFT_ONLY,Metadata only
+ACT.011,2025-11-26,Professional outreach describing citizen-led digital-sovereignty charters,PUBLIC_INTEREST_OUTREACH,SENT_CONFIRMED,Public-safe metadata
+ACT.012,2025-12-02,Sovereignty Charter economic and continuity annex published,PUBLICATION,PUBLISHED_CONFIRMED,Public with model disclaimer
+ACT.013,2026-03-14,Citizen brief on digital integrity and human protection created,PUBLIC_EDUCATION,AUTHORED,Public-safe after review
+ACT.014,2026-06-20,Recours Collectif des Familles ten-volume guide distributed to a community recipient,RESOURCE_DISTRIBUTION,DISTRIBUTED_CONFIRMED,Recipient redacted
+ACT.015,2026-06-20,Recours Collectif des Familles ten-volume guide distributed to a second community recipient,RESOURCE_DISTRIBUTION,DISTRIBUTED_CONFIRMED,Recipient redacted
+ACT.016,2026-06-26,Proposal negotiation and engagement pipeline formalized in Notion,CONTROL_ARCHITECTURE,CONTROL_ARCHITECTURE,Architecture only
+ACT.017,2026-06-26,Master workspace engagement register formalized,CONTROL_ARCHITECTURE,CONTROL_ARCHITECTURE,Architecture only
+ACT.018,2026-06-26,Citizen Stack Omega and Citizen Vault Omega registered in project command,CONTROL_ARCHITECTURE,CONTROL_ARCHITECTURE,Architecture only
+ACT.019,2026-06-27,Citizen Participation Omega source reconciliation initiated,ARCHIVAL_CONSOLIDATION,AUTHORED,Public-safe methodology
+ACT.020,2026-06-27,Citizen Participation Omega package released,ARCHIVAL_CONSOLIDATION,PUBLISHED_CONFIRMED,Public-safe release available
