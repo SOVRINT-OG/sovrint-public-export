@@ -1,0 +1,11 @@
+event_id,date,title,event_state,validation,public_summary
+CHR.001,2025-03-01,Package review window begins,ARCHIVED,VERIFIED_WINDOW,Start of the controlled annual review window.
+CHR.002,2025-04-10,Bill 91 adopted and assented to,DECIDED,OFFICIAL_SOURCE_VERIFIED,Quebec adopted and assented to the Act establishing the Unified Family Tribunal within the Court of Quebec.
+CHR.021,2025-06-20,Petition-sharing activity confirmed by platform notices,ACKNOWLEDGED,PLATFORM_METADATA_VERIFIED,Platform notices show petition-sharing activity and new signers.
+CHR.022,2025-06-27,Memberships in DPJ public-inquiry advocacy groups confirmed,ACKNOWLEDGED,PLATFORM_METADATA_VERIFIED,Membership approvals in relevant public advocacy groups were recorded.
+CHR.024,2025-06-29,Change.org petition update and signature-export notice received,ACKNOWLEDGED,PLATFORM_METADATA_VERIFIED,The platform confirmed a petition update and availability of a signature CSV.
+CHR.025,2025-07-02,Coalition public-information posts recorded,PUBLISHED,PLATFORM_METADATA_VERIFIED,Coalition posts on family rights and institutional accountability were circulated.
+CHR.028,2025-08-27,Public-inquiry advocacy post engagement recorded,PUBLISHED,PLATFORM_METADATA_VERIFIED,A public advocacy post generated group interaction.
+CHR.030,2026-02-19,Participation request in a child-protection advocacy group recorded,ACKNOWLEDGED,PLATFORM_METADATA_VERIFIED,A participation request was recorded by the platform.
+CHR.032,2026-06-27,Package 04 deep-build reconciliation initiated,AUDITED,PROCESS_VERIFIED,"Sources law claims access classes and procedural states were reconciled."
+CHR.033,2026-06-27,"Family Rights DPJ & Youth Justice Omega released",ARCHIVED,PROCESS_VERIFIED,The complete controlled and public-safe package layers were generated.
