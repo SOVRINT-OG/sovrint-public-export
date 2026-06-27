@@ -1,0 +1,13 @@
+control_id,domain,first_control,next_control,public_rule
+RC.001,Family continuity,Youth Protection Act sections 4 to 4.3,Documented review and court process as applicable,Record family-maintenance continuity participation and reasons.
+RC.002,Child voice,Supported child participation and representation,Court or rights review as applicable,Separate the child's words professional interpretation and institutional conclusion.
+RC.003,Parent voice,Notice participation response and proposed alternatives,Complaint review or court route as applicable,Record opportunity response accommodations and outcome.
+RC.004,Parent-child contact,Case-team and authorized decision route,Complaint variation review or appeal depending on authority,Record schedule cancellation reason authority make-up and review.
+RC.005,Sibling continuity,Placement and case-planning control,Review complaint or court route as applicable,Track significant relationships without public identifiers.
+RC.006,Service quality,Local service-quality and complaints commissioner,Protecteur du citoyen where eligible,Separate complaint acknowledgment response recommendation and implementation.
+RC.007,Youth rights,CDPDJ rights process,Statutory follow-up or court route as applicable,Map the precise right event evidence and requested remedy.
+RC.008,Court decision,Variation review or appeal route,Appellate process where authorized,Preserve order reasons record deadline and disposition.
+RC.009,Professional conduct,Barreau or relevant professional-order syndic,Disciplinary or review process,Separate professional role act standard evidence and outcome.
+RC.010,Record correction,Request to the record holder,Privacy access complaint or legal route as applicable,Preserve original entry and append correction evidence decision and downstream notice.
+RC.011,Placement health and safety,Clinical and service escalation first,Commissioner Protecteur or professional route as applicable,Protect clinical and placement identifiers from public release.
+RC.012,Implementation,Named responsible authority,Audit correction and escalation,Do not treat a decision or recommendation as implemented without proof.
