@@ -17,3 +17,8 @@ Authored, sent, delivered, received, acknowledged, responded, implemented, audit
 ## Rights
 
 See SOVRINT_LICENSE.md. Cite source and version for research references; citation does not grant reuse permission.
+
+
+## Research status and evidence
+
+See [RESEARCH_STATUS.yaml](./RESEARCH_STATUS.yaml) for the version, release, DOI, evidence class, validation state, source-register guidance, and rights metadata. Update that record when those facts change. Cite sources beside claims that depend on them; citation alone does not grant reuse permission.
