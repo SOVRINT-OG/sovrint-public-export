@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   metadata-and-data:
-    name: Metadata, JSON, and YAML validation
+    name: Research metadata, JSON, and YAML validation
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
@@ -21,9 +21,10 @@ jobs:
         run: |
           ruby <<'RUBY'
           require "yaml"
+          require "date"
           path = "RESEARCH_STATUS.yaml"
           abort "Missing #{path}" unless File.file?(path)
-          status = YAML.safe_load_file(path, permitted_classes: [], permitted_symbols: [], aliases: false)
+          status = YAML.safe_load_file(path, permitted_classes: [Date], permitted_symbols: [], aliases: false)
           required = %w[schema_version repository author project_status publication evidence sources rights]
           missing = required - status.keys
           abort "Missing required metadata keys: #{missing.join(', ')}" unless missing.empty?
@@ -34,9 +35,9 @@ jobs:
           abort "Rights notice file is missing" unless File.file?(rights.fetch("notice"))
           Dir.glob("**/*.{yaml,yml}").sort.each do |file|
             next if file.start_with?(".git/")
-            YAML.safe_load_file(file, permitted_classes: [], permitted_symbols: [], aliases: false)
+            YAML.safe_load_file(file, permitted_classes: [Date], permitted_symbols: [], aliases: false)
           end
-          puts "Research status and YAML files are valid."
+          puts "Research status and YAML files are valid (including date scalars)."
           RUBY
           python - <<'PY'
           import json
