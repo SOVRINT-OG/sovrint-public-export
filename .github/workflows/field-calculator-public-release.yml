@@ -1,0 +1,48 @@
+name: Field Calculator public release verification
+
+on:
+  pull_request:
+    paths:
+      - 'releases/2026-10-21/field-calculator-v1.0.0/**'
+      - '.github/workflows/field-calculator-public-release.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'releases/2026-10-21/field-calculator-v1.0.0/**'
+      - '.github/workflows/field-calculator-public-release.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-package-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Python 3.12
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.12'
+      - name: Python offline regression suite
+        working-directory: releases/2026-10-21/field-calculator-v1.0.0
+        run: python -m unittest discover -v -s tests -p 'test_*.py'
+      - name: JavaScript and Python numerical parity
+        working-directory: releases/2026-10-21/field-calculator-v1.0.0
+        run: node --test cloudflare/field-state.test.mjs
+      - name: Reproduce synthetic report
+        working-directory: releases/2026-10-21/field-calculator-v1.0.0
+        run: |
+          python examples/make_synthetic_input.py --output input.json
+          python field_calculator.py --input input.json --output result_1.json
+          python field_calculator.py --input input.json --output result_2.json
+          cmp result_1.json result_2.json
+          python - <<'PY'
+          import json
+          with open('result_1.json') as f:
+              r = json.load(f)
+          assert all(abs(float(v)-50.0)<1e-9 for v in r['state_vector'].values())
+          assert r['classification']=='MIXED_TRANSITIONAL'
+          PY
+          sha256sum input.json result_1.json field_calculator.py CALCULATION_SPEC_v1.yaml
