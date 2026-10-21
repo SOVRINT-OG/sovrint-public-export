@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_id": "SOVRINT-FIELD-CALC-001",
+  "artifact_class": "RELEASE",
+  "title": "SOVRINT Field Calculator — public research prototype",
+  "author": "Katrina Pietroniro",
+  "version": "1.0.0",
+  "publication_date": "2026-10-21",
+  "access": "public",
+  "license": "SOVRINT_LICENSE.md (all rights reserved; no open-source license)",
+  "model_specification_status": "canonical_draft",
+  "implementation_status": "tested_research_prototype",
+  "evidence_scope": "synthetic_numerical_conformance",
+  "empirically_validated": false,
+  "clinically_validated": false,
+  "production_security_certified": false,
+  "public_host": "https://calculator.sovrint.ca/",
+  "private_source_repo": "SOVRINT-OG/sovrint-core",
+  "source_merge_commit": "7b7985234452229fa6b62a6f6ab7699fedc80ec1",
+  "cloudflare_worker_version": "f1d28685-b0fc-4f14-845f-af1af13211b8",
+  "evidence_status": [
+    "Python 3.11/3.12 unit tests passed",
+    "Node.js numerical parity tests passed",
+    "Cloudflare worker deployment API confirms 100% routing",
+    "Independent browser/client smoke test not established"
+  ],
+  "constraints": [
+    "no sensitive personal data on public endpoint",
+    "not a diagnostic",
+    "not causal evidence",
+    "no inference of intentional interference"
+  ],
+  "upstream_files": [
+    "CALCULATION_SPEC_v1.yaml",
+    "field_calculator.py",
+    "tests/test_field_calculator.py",
+    "examples/make_synthetic_input.py",
+    "cloudflare/field-state.mjs",
+    "cloudflare/field-state.test.mjs"
+  ]
+}

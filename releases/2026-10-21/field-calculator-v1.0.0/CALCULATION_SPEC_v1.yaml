@@ -1,0 +1,141 @@
+application:
+  id: SOVRINT_FIELD_CALCULATOR
+  title: "SOVRINT™ Field Calculator"
+  author: "Katrina Pietroniro"
+  framework: "SOVRINT™"
+  version: "1.0"
+  status: "Canonical Draft"
+
+purpose:
+  - calculate transparent multi-layer field-state indices
+  - separate measurement from interpretation
+  - preserve provenance and confidence
+  - support public and private use
+
+non_uses:
+  - medical diagnosis
+  - astrological causation claims
+  - automated high-impact decisions
+  - proof of intentional interference from technical anomalies
+
+state_vector:
+  notation: "F_t = [EAS, TSS, HLI, OC, IR, FCS]"
+  outputs:
+    EAS:
+      name: Environmental Activity Score
+      range: [0, 100]
+      direction: higher_means_more_activity
+    TSS:
+      name: Technical Signal Stability
+      range: [0, 100]
+      direction: higher_means_more_stability
+    HLI:
+      name: Human Load Index
+      range: [0, 100]
+      direction: higher_means_more_load
+    OC:
+      name: Observability Confidence
+      range: [0, 100]
+      direction: higher_means_more_confidence
+    IR:
+      name: Interpretive Risk
+      range: [0, 100]
+      direction: higher_means_more_risk
+    FCS:
+      name: Field Coherence Score
+      range: [0, 100]
+      direction: higher_means_more_coherence
+
+evidence_classes:
+  - measured
+  - self_reported
+  - interpretive
+  - symbolic
+
+normalization:
+  bounded:
+    formula: "x_i = clamp((r_i - min_i) / (max_i - min_i), 0, 1)"
+  inverse_stability:
+    formula: "x_stability = 1 - x_disturbance"
+
+calculations:
+  EAS:
+    formula: "100 * sum(w_i * x_i) / sum(w_i)"
+    default_inputs:
+      pressure_change: 0.15
+      wind_intensity: 0.10
+      precipitation_severity: 0.10
+      temperature_stress: 0.10
+      humidity_stress: 0.10
+      air_quality_severity: 0.15
+      geomagnetic_activity: 0.15
+      solar_alert_severity: 0.15
+  TSS:
+    formula: "100 * (1 - sum(w_i * disturbance_i) / sum(w_i))"
+    default_inputs:
+      packet_loss: 0.20
+      latency_deviation: 0.20
+      rf_noise_elevation: 0.20
+      outage_severity: 0.15
+      gnss_degradation: 0.10
+      equipment_anomaly_rate: 0.15
+  HLI:
+    formula: "100 * (0.30*sleep_debt + 0.25*cognitive_load + 0.20*emotional_load + 0.15*physical_stress + 0.10*attentional_fragmentation)"
+  OC:
+    formula: "100 * (0.40*source_quality + 0.25*data_recency + 0.20*layer_coverage + 0.15*source_agreement)"
+  IR:
+    formula: "100 * (0.35*evidence_gap + 0.25*human_load + 0.20*anomaly_density + 0.20*source_disagreement)"
+  FCS:
+    formula: "100 * (0.30*environmental_stability + 0.25*technical_stability + 0.20*human_readiness + 0.25*observability_confidence)"
+    derived_inputs:
+      environmental_stability: "1 - EAS/100"
+      technical_stability: "TSS/100"
+      human_readiness: "1 - HLI/100"
+      observability_confidence: "OC/100"
+
+classification_bands:
+  - min: 0
+    max: 19
+    label: CRITICAL_INSTABILITY
+  - min: 20
+    max: 39
+    label: HIGH_DISTURBANCE
+  - min: 40
+    max: 59
+    label: MIXED_TRANSITIONAL
+  - min: 60
+    max: 79
+    label: STABLE_WITH_ACTIVE_VARIABLES
+  - min: 80
+    max: 100
+    label: HIGH_COHERENCE
+
+required_record_fields:
+  - observation_id
+  - created_at
+  - location
+  - layer
+  - value
+  - unit
+  - source
+  - source_url
+  - source_class
+  - retrieved_at
+  - confidence
+  - evidence_class
+  - user_notes
+  - calculation_version
+
+modes:
+  public:
+    account_required: false
+    persistent_private_journal: false
+    manual_calculator: true
+    report_export: true
+  private:
+    account_required: true
+    encrypted_journal: true
+    saved_locations: true
+    custom_weights: true
+    history: true
+    export_and_delete_controls: true
